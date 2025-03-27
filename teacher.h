@@ -1,5 +1,5 @@
-#ifndef TEACHER.H
-#define TEACHER.H
+#ifndef TEACHER_H
+#define TEACHER_H
 #include "user.h"
 
 class teacher : public user{

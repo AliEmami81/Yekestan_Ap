@@ -1,5 +1,5 @@
-#ifndef USER.H
-#define USER.H
+#ifndef USER_H
+#define USER_H
 #include <iostream>
 using namespace std;
 
@@ -15,17 +15,6 @@ public:
     virtual ~user() {}
 
 };
-
-
-
-
-
-
-
-
-
-
-
 
 
 
