@@ -10,12 +10,17 @@ void admin::displayinfo(){
 }
 
 void admin::displayusers(){
-
+    cout << "list of users are:" << endl;
+    for (const auto &a: users){
+        cout << "- " << a->getusername() << endl;
+    
+    }
 
 }
 
 void admin::adduser(user* newuser){
-
+    users.push_back(newuser);
+    cout << "user" << newuser->getusername() << "user added." << endl;
 
 }
 
