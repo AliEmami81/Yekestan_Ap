@@ -12,6 +12,7 @@ public:
     virtual void displayinfo();
     string getusername();
     bool checkpassword(string password);
+    void setpassword(string newpass);
     virtual ~user() {}
 
 };

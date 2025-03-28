@@ -2,9 +2,8 @@
 
 
 course::course(string name, string code){
-    coursename = name;
-    coursecode = code;
 }
+
 void course::showstudent(student* student){
     students.push_back(student);
     cout << "Student " << student->getusername() << coursename << endl;

@@ -1,8 +1,6 @@
 #include "admin.h"
 
 admin::admin(string uname,string pass): user(uname,pass){
-    username = uname;
-    password = pass;
 }
 
 void admin::displayinfo(){
@@ -26,14 +24,26 @@ void admin::adduser(user* newuser){
 
 
 void admin::edituser(string username, string newpass){
-
-
+for ( auto &a : users){
+    if ( a->getusername() == username){
+        a->setpassword(newpass);
+        cout << "password for user" << username << "was changed." << endl;
+        return;
+    }
+}
+cout << "user with username" << username << "was not found" << endl;
 
 }
 
 
-void admin::removeuser(string username){
-
-
-
+void admin::removeuser(string username) {
+    for (int i = 0; i < users.size(); i++) {
+        if (users[i]->getusername() == username) {
+            delete users[i];
+            users.erase(users.begin() + i);  
+            cout << "User " << username << " removed." << endl;
+            return;
+        }
+    }
+    cout << "User " << username << " not found." << endl;
 }

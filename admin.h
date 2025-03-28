@@ -17,6 +17,7 @@ class admin : public user{
     void adduser(user* newuser);
     void removeuser(string username);
     void edituser(string username, string newpass);
+ 
 };
 
 
