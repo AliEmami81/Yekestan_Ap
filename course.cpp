@@ -16,6 +16,10 @@ void course::displaystudents(){
     }
 }
 
+void course::addstudent(student* newStudent) {
+    students.push_back(newStudent);
+    cout << "Student " << newStudent->getusername() << " added to " << coursename << endl;
+}
 
 string course::getcoursename(){
     return coursename;

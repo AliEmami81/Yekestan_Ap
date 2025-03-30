@@ -3,16 +3,27 @@
 #include <iostream>
 using namespace std;
 
+enum class Role{
+Admin,
+Teacher,
+Student
+};
+
+
+
+
 class user{
-protected:
+private:
     string username;
     string password;
+    Role role;
 public:
-    user(string uname, string pass);
+    user(string uname, string pass, Role r);
     virtual void displayinfo();
+    Role getrole();
     string getusername();
-    bool checkpassword(string password);
     void setpassword(string newpass);
+    bool checkpassword(string password);
     virtual ~user() {}
 
 };

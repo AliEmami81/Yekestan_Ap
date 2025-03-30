@@ -14,6 +14,7 @@ class course{
     public:
     course(string name, string code);
     void showstudent(student* student);
+    void addstudent(student* newstudent);
     void displaystudents();
     string getcoursename();
     string getcoursecode();
