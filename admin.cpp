@@ -1,10 +1,10 @@
 #include "admin.h"
 
-admin::admin(string uname,string pass): user(uname,pass){
+admin::admin(string uname,string pass): user(uname,pass, Role::Admin){
 }
 
 void admin::displayinfo(){
-    cout << "admin username:" << username << endl;
+    cout << "admin username:" << getusername() << endl;
 }
 
 void admin::displayusers(){
@@ -46,4 +46,10 @@ void admin::removeuser(string username) {
         }
     }
     cout << "User " << username << " not found." << endl;
+}
+
+void admin::displaycourses(){
+    cout << "list of courses:" << endl;
+    for (const auto &b : courses)
+
 }

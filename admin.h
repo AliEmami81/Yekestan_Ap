@@ -13,7 +13,7 @@ class admin : public user{
     
     void displayinfo() override;
     void displayusers();
-    
+    void displaycourses();
     void adduser(user* newuser);
     void removeuser(string username);
     void edituser(string username, string newpass);

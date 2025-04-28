@@ -17,6 +17,7 @@ private:
     string username;
     string password;
     Role role;
+    bool isdeleted = false;
 public:
     user(string uname, string pass, Role r);
     virtual void displayinfo();
